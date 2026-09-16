@@ -9,21 +9,21 @@
   --color-primary-dark: #064E3B;
   --color-secondary: #0F172A;
   --color-secondary-hover: #1E293B;
-  
+
   --color-accent: #D1FAE5;
   --color-accent-text: #065F46;
   --color-accent-border: #A7F3D0;
-  
+
   --color-surface: #FFFFFF;
   --color-background: #F8FAFC;
   --color-card-bg: rgba(255, 255, 255, 0.85);
   --color-border: #E2E8F0;
   --color-border-hover: #CBD5E1;
-  
+
   --color-text: #0F172A;
   --color-text-muted: #64748B;
   --color-text-light: #94A3B8;
-  
+
   --color-warning: #D97706;
   --color-warning-bg: #FEF3C7;
   --color-error: #DC2626;
@@ -32,7 +32,7 @@
   /* Typography */
   --font-family-heading: 'Outfit', sans-serif;
   --font-family-body: 'Inter', sans-serif;
-  
+
   --font-size-xs: 0.75rem;     /* 12px */
   --font-size-sm: 0.875rem;    /* 14px */
   --font-size-base: 1rem;      /* 16px */
@@ -695,6 +695,55 @@ button, input, select, textarea {
 .modal-close-btn:hover {
   background: #E2E8F0;
   color: var(--color-text);
+}
+
+/* Authentication layout */
+.auth-screen {
+  min-height: 100svh;
+}
+
+@media (max-width: 768px) {
+  .auth-screen {
+    grid-template-columns: 1fr !important;
+  }
+
+  .auth-hero {
+    min-height: auto;
+    padding: 32px 24px !important;
+    gap: 32px;
+  }
+
+  .auth-panel {
+    padding: 32px 20px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .auth-hero {
+    padding: 24px 16px !important;
+  }
+
+  .auth-hero h2 {
+    font-size: 2rem;
+  }
+
+  .auth-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .auth-panel {
+    padding: 20px 12px !important;
+  }
+
+  .auth-card {
+    padding: 24px 18px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .modal-content-box {
+    padding: 24px 18px;
+  }
 }
 
 /* Animations */
